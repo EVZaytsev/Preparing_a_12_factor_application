@@ -1,17 +1,16 @@
-name: Python Lint
+name: Python Syntax Check
 
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   lint:
-    name: Check Python Syntax
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v2
 
     - name: Set up Python
@@ -20,10 +19,9 @@ jobs:
         python-version: 3.8
 
     - name: Install dependencies
-      run: pip install flake8 black
+      run: pip install -r requirements.txt
 
-    - name: Run Flake8
-      run: flake8 .
-      
-    - name: Run Black
-      run: black --check .
+    - name: Run pylint
+      run: |
+        # Здесь укажите команду для запуска pylint для вашего проекта
+        pylint your_python_file.py
