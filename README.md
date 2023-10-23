@@ -9,5 +9,4 @@
 - **СУБД**: Redis
 
 ## Запуск
-Фактор #1 – Кодовая база (Codebase)
 docker-compose up --build
