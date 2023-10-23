@@ -1,0 +1,20 @@
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker build -t my-docker-image .
+
+    - name: Check Docker image
+      run: docker run my-docker-image echo "Docker image is working"
