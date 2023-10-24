@@ -8,4 +8,4 @@ RUN pip3 install -r requirements.txt
 COPY visit_schetchik.py visit_schetchik.py
 EXPOSE 5000
 RUN pip install -r requirements.txt
-CMD ["python","Visit_schetchik.py"]
+CMD ["python","visit_schetchik.py"]
